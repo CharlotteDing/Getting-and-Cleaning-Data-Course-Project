@@ -1,17 +1,17 @@
-        DATA DICTIONARY - Run_analysis
+DATA DICTIONARY - Run_analysis
 
-Subject  30<br />
-    >Volunteers of Experiment<br />
+Subject  30      
+        Volunteers of Experiment<br />
         1..30 30 volunteers within an age bracket of 19-48 years<br />
                
-Activity 6<br />
-    Experiment activity<br />
-         1 WALKING<br />
-         2 WALKING_UPSTAIRS<br />
-         3 WALKING_DOWNSTAIRS<br />
-         4 SITTING<br />
-         5 STANDING<br />
-         6 LAYING<br />  
+Activity 6      
+            Experiment activity<br />
+                1 WALKING<br />
+                2 WALKING_UPSTAIRS<br />
+                3 WALKING_DOWNSTAIRS<br />
+                4 SITTING<br />
+                5 STANDING<br />
+                6 LAYING<br />  
          
 Signal features variables 79<br />
     Experiment records of the signals<br />
