@@ -1,8 +1,8 @@
         DATA DICTIONARY - Run_analysis
 
 Subject  30<br />
-    Volunteers of Experiment<br />
-         1..30 30 volunteers within an age bracket of 19-48 years<br />
+    >Volunteers of Experiment<br />
+        1..30 30 volunteers within an age bracket of 19-48 years<br />
                
 Activity 6<br />
     Experiment activity<br />
