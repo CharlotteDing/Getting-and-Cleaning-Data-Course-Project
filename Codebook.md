@@ -1,13 +1,14 @@
 DATA DICTIONARY - Run_analysis
 
+
 Subject  30                 
 >Volunteers of Experiment   
 >>1..30  volunteers within an age bracket of 19-48 years
                
 Activity 6      
-         Experiment activity<br />
-                1 WALKING<br />
-                2 WALKING_UPSTAIRS<br />
+>Experiment activity
+>>1 WALKING    
+>>2 WALKING_UPSTAIRS<br />
                 3 WALKING_DOWNSTAIRS<br />
                 4 SITTING<br />
                 5 STANDING<br />
