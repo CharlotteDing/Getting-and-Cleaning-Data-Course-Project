@@ -1,8 +1,8 @@
 DATA DICTIONARY - Run_analysis
 
 Subject  30                 
-         Volunteers of Experiment   
-         1..30  volunteers within an age bracket of 19-48 years
+>Volunteers of Experiment   
+>>1..30  volunteers within an age bracket of 19-48 years
                
 Activity 6      
          Experiment activity<br />
@@ -15,7 +15,7 @@ Activity 6
          
 Signal features variables 79        
          Experiment records of the signals<br />
-                 >>>>1 prefix 't'                >>>>- denote time<br />
+                 - prefix 't'      denote time<br />
                  - prefix 'f'                frequency<br />
                  - BodyAcc             body acceleration signals<br />
                  - GravityAcc               gravity acceleration signals<br />
