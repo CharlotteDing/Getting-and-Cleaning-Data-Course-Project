@@ -1,0 +1,31 @@
+run_analysis<-function(){
+        setwd("./UCI HAR Dataset")
+        feature<-read.table("features.txt",header=FALSE)
+        trainx<-read.table("./train/X_train.txt",header=FALSE)
+        trainy<-read.table("./train/y_train.txt",header=FALSE)
+        trainsub<-read.table("./train/subject_train.txt",header=FALSE)
+        names(trainx)<-feature[,2]
+        names(trainsub)<-"Subject"
+        train<-cbind(trainy,trainsub,trainx)
+        testx<-read.table("./test/X_test.txt",header=FALSE)
+        testy<-read.table("./test/y_test.txt",header=FALSE)
+        testsub<-read.table("./test/subject_test.txt",header=FALSE)
+        names(testx)<-feature[,2]
+        names(testsub)<-"Subject"
+        test<-cbind(testy,testsub,testx)
+        data<-rbind(train,test)
+        extract<-data[,c(1,2,grep("mean",colnames(data)),grep("std",colnames(data)))]
+        activity<-read.table("activity_labels.txt",header=FALSE)
+        names(activity)<-c("1","Activity")
+        setname<-merge(activity,extract,by.x="1",by.y=1)
+        raw<-setname[,2:82]
+        colnames(raw)<-gsub("BodyBody","Body",colnames(raw),fixed=TRUE)
+        colnames(raw)<-gsub("()","",colnames(raw),fixed=TRUE)
+        colnames(raw)<-gsub("-","",colnames(raw),fixed=TRUE)
+        colnames(raw)<-gsub("std","Std",colnames(raw),fixed=TRUE)
+        colnames(raw)<-gsub("mean","Mean",colnames(raw),fixed=TRUE)
+        library(reshape2)
+        setmelt<-melt(raw,id=c("Activity","Subject"),measure.vars=colnames(raw[,3:81]))
+        tidydata<-dcast(setmelt,Subject+Activity~variable,mean)
+        View(tidydata)
+}
