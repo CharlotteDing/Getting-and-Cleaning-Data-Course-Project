@@ -1,5 +1,4 @@
 run_analysis<-function(){
-        setwd("./UCI HAR Dataset")
         feature<-read.table("features.txt",header=FALSE)
         trainx<-read.table("./train/X_train.txt",header=FALSE)
         trainy<-read.table("./train/y_train.txt",header=FALSE)
