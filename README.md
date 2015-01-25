@@ -27,11 +27,10 @@ Running step:
 2, Merge train and test sets to a data frame named 'data'   
 3, Extract the measurements on the mean and standard deviation for each measurement in 'data' to 'extract'   
 4, Name the activities in 'extract' with activity_labels file and subset with all meaningful indices into 'raw' dataframe  
-5, Remove typo and symbols in feature names  
-6, Apply camelCase to feature names 
-7, Melt 'raw' by Activity and Subject, feature as variables into 'setmelt'    
-8, Cast the average of each variable for each activity and each subject, into 'tidydata'  
-9, Show tidydata in R   
+5, Remove typo, symbols and apply camelCase to feature names      
+6, Melt 'raw' by Activity and Subject, feature as variables into 'setmelt'    
+7, Cast the average of each variable for each activity and each subject, into 'tidydata'  
+8, Show tidydata in R   
 
 Notes: 
 -----
