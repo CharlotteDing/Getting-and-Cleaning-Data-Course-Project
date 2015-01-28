@@ -42,5 +42,6 @@ run_analysis<-function(){
         tidydata<-dcast(setmelt,Subject+Activity~variable,mean)
         
         ## Output result
+        write.table(tidydata,file="tidydataset.txt",row.name=FALSE)
         View(tidydata)
 }
