@@ -1,5 +1,3 @@
-run_analysis<-function(){
-
         ## Read experiment train data into R, merge with subject and activity valune, set feature names 
         feature<-read.table("features.txt",header=FALSE)
         trainx<-read.table("./train/X_train.txt",header=FALSE)
@@ -44,4 +42,3 @@ run_analysis<-function(){
         ## Output result
         write.table(tidydata,file="tidydata.txt",row.name=FALSE)
         View(tidydata)
-}
